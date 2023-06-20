@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   small_logic.c                                      :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
+/*   By: mmirzaie <mmirzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 19:10:32 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:10:33 by mehdimirzai      ###   ########.fr       */
+/*   Created: 2023/03/09 13:00:34 by mmirzaie          #+#    #+#             */
+/*   Updated: 2023/03/14 11:26:20 by mmirzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "libft.h"
 
-void	small_logic(t_node **head)
+size_t	ft_strlcpy(char *dest, const char *src, size_t l)
 {
-	if ((*head)->data > (*head)->next->data)
-		swap(head, 'a');
-	return ;
+	size_t	i;
+
+	i = 0;
+	while (src[i] && i + 1 < l)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	if (l)
+		dest[i] = '\0';
+	return (ft_strlen(src));
 }

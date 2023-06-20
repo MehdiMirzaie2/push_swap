@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   small_logic.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
+/*   By: mmirzaie <mmirzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 19:10:32 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:10:33 by mehdimirzai      ###   ########.fr       */
+/*   Created: 2023/03/16 11:57:38 by mmirzaie          #+#    #+#             */
+/*   Updated: 2023/03/16 12:05:57 by mmirzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "libft.h"
 
-void	small_logic(t_node **head)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if ((*head)->data > (*head)->next->data)
-		swap(head, 'a');
-	return ;
+	t_list	*tmp;
+
+	if (!del || !lst || !*lst)
+		return ;
+	while (lst && *lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
+	}
 }

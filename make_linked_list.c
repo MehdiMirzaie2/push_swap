@@ -1,56 +1,116 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   make_linked_list.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/16 19:08:36 by mehdimirzai       #+#    #+#             */
+/*   Updated: 2023/06/20 11:17:45 by mehdimirzai      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ps.h"
 
-static void add(t_node *head, int value)
+static int	add(t_node *head, int value)
 {
-    t_node *current = head;
+	t_node	*current;
 
-    if (value > 2147483647 || value < -2147483648)
-    {
-        free(head);
-        quit();
-    }   
-    while (current->next != NULL)
-        current = current->next;
-    current->next = malloc(sizeof(t_node));
-    if (!current)
-    {
-        free(head);
-        quit();
-    }
-    current->next->data = value;
-    current->next->next = NULL;
+	current = head;
+	while (current->next != NULL)
+		current = current->next;
+	current->next = malloc(sizeof(t_node));
+	if (!current)
+		return (1);
+	current->next->data = value;
+	current->next->next = NULL;
+	current->next->index = current->index + 1;
+	return (0);
 }
 
-int make_linked_list(t_node **head, char **value)
+void	free_and_quit(t_node **head)
 {
-    t_node *latest_node;
-    t_node  *prev_node;
-
-    int     length;
-
-    length = 1;
-    *head = malloc(sizeof(t_node));
-    if (!head)
-    {
-        quit();
-        // ft_putstr_fd("Error\n", 2);
-        // exit(EXIT_FAILURE);
-    }
-    (*head)->next = NULL;
-    (*head)->data = ft_atoi(*value);
-    if ((*head)->data > 2147483647 || (*head)->data < -2147483648)
-    {
-	    free_linked_list(*head);
-        quit();
-    }
-    latest_node = *head;
-    while (++value != NULL && *value != NULL)
-    {
-        add(latest_node, ft_atoi(*value));
-        prev_node = latest_node;
-        latest_node = latest_node->next;
-        latest_node->prev = prev_node;
-        length++;
-    }
-    return (length);
+	free_linked_list(*head);
+	quit();
 }
+
+long	make_and_return_length(t_node **head, char **value)
+{
+	t_node	*latest_node;
+	t_node	*prev_node;
+	int		length;
+
+	length = 0;
+	latest_node = *head;
+	while (++value != NULL && *value != NULL)
+	{
+		if (add(latest_node, ft_atoi(*value)) == 1)
+			free_and_quit(head);
+		if (latest_node->data < -2147483648 || latest_node->data > 2147483647)
+			free_and_quit(head);
+		prev_node = latest_node;
+		latest_node = latest_node->next;
+		latest_node->prev = prev_node;
+		length++;
+	}
+	return (length);
+}
+
+int	make_linked_list(t_node **head, char **value)
+{
+	int	length;
+
+	length = 1;
+	*head = malloc(sizeof(t_node));
+	if (!head)
+		free_and_quit(head);
+	(*head)->next = NULL;
+	(*head)->data = ft_atoi(*value);
+	(*head)->index = 0;
+	if ((*head)->data < -2147483648 || ((*head)->data > 2147483647))
+		free_and_quit(head);
+	length += make_and_return_length(head, value);
+	return (length);
+}
+
+// int	make_linked_list(t_node **head, char **value)
+// {
+// 	t_node	*latest_node;
+// 	t_node	*prev_node;
+// 	long	length;
+
+// 	length = 1;
+// 	*head = malloc(sizeof(t_node));
+// 	if (!head)
+// 	{
+// 		free_linked_list(*head);
+// 		quit();
+// 	}
+// 	(*head)->next = NULL;
+// 	(*head)->data = ft_atoi(*value);
+// 	(*head)->index = 0;
+// 	if ((*head)->data < -2147483648 || ((*head)->data > 2147483647))
+// 	{
+// 		free_linked_list(*head);
+// 		quit();
+// 	}
+// 	latest_node = *head;
+// 	while (++value != NULL && *value != NULL)
+// 	{
+// 		if (add(latest_node, ft_atoi(*value)) == 1)
+// 		{
+// 			free_linked_list(*head);
+// 			quit();
+// 		}
+// 		if (latest_node->data < -2147483648 || latest_node->data > 2147483647)
+// 		{
+// 			free_linked_list(*head);
+// 			quit();
+// 		}
+// 		prev_node = latest_node;
+// 		latest_node = latest_node->next;
+// 		latest_node->prev = prev_node;
+// 		length++;
+// 	}
+// 	return (length);
+// }

@@ -1,16 +1,14 @@
 SRCS 		= main.c push.c make_linked_list.c rotate.c swap.c \
-				small_logic.c three_sort.c five_sort.c\
-				utils.c
+				small_logic.c three_sort.c five_sort.c big_sort.c set_cost.c smallest_large.c\
+				utils.c utils2.c 
 
-# OBJ_DIR		= ./obj
 OBJS 		= $(SRCS:.c=.o)
 
 CC 			= gcc
 RM 			= rm -f
 CFLAGS 		= -Llibft -lft
-OFLAGS 		= -I libft -Wall -Wextra -Werror -g
+OFLAGS 		= -I libft -Wall -Wextra -Werror
 libft 		= libft/libft.a
-
 
 NAME 		= push_swap
 

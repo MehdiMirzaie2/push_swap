@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   small_logic.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
+/*   By: mmirzaie <mmirzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 19:10:32 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:10:33 by mehdimirzai      ###   ########.fr       */
+/*   Created: 2023/03/09 11:32:11 by mmirzaie          #+#    #+#             */
+/*   Updated: 2023/03/10 14:03:52 by mmirzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "libft.h"
 
-void	small_logic(t_node **head)
+size_t	ft_strlen(const char *str)
 {
-	if ((*head)->data > (*head)->next->data)
-		swap(head, 'a');
-	return ;
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

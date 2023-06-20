@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   small_logic.c                                      :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
+/*   By: mmirzaie <mmirzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 19:10:32 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:10:33 by mehdimirzai      ###   ########.fr       */
+/*   Created: 2023/03/16 11:30:31 by mmirzaie          #+#    #+#             */
+/*   Updated: 2023/03/16 14:12:41 by mmirzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "libft.h"
 
-void	small_logic(t_node **head)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if ((*head)->data > (*head)->next->data)
-		swap(head, 'a');
-	return ;
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
