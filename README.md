@@ -1,16 +1,14 @@
-<p align="center">
-  <h3 align="center">42-Push_Swap</h3>
-</p>
+<h1 align="center">42-Push_Swap</h1>
 
 # :pushpin: Index
 
-* [What's this Repo?](#sparkles-What-is-Libft?)
+* [What's this Repo?](#sparkles-What-is-Push_Swap?)
 * [The Struct Used](#bookmark_Struct-used)
 * [Technologies](#computer-Technologies)
 * [How to Run](#construction_worker-How-to-Run)
 * [Find a Bug? Or something needs to change?](#bug-Issues)
 
-# :sparkles: What is Libft?
+# :sparkles: What is Push_Swap?
 
 Push_swap is an individual project I undertook at 42 School (42 Adelaide), where I developed an integer sorting program. The project challenged me to create the program using only two stacks, with stack "a" provided as standard input and stack "b" utilized as a buffer for storing and sorting the stack.
 
