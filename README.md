@@ -60,4 +60,4 @@ $ ./push_swap <your integers>
 Please feel free **to create a new issue** with its title and description on the issues page of the [push_swap](https://github.com/MehdiMirzaie2/push_swap/issues) Repository. If you have already found the solution to the problem, **I would love to review your pull request**!
 
 
-To help me out, and if you think this repo help give ⭐️
+To help me out, and if you think this repo is helpful give ⭐️
