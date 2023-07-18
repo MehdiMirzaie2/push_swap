@@ -1,4 +1,4 @@
-<h1 align="center">42-Push_Swap</h1>
+<h1 align="center">⛓️42-Push_Swap</h1>
 
 # :pushpin: Index
 
