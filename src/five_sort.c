@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:12:57 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:14:57 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:12 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 void	four_sort(t_node **a, t_node **b, t_node **tail_a)
 {

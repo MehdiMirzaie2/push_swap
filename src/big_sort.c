@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 18:56:09 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/20 12:08:11 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:05 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 void	to_b(t_node **a, t_node **b, int length, t_node **tail_a)
 {

@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:17:36 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:18:21 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:36 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 void	swap(t_node **head, int a_or_b)
 {

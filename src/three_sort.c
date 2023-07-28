@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:11:39 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:11:50 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:40 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 void	three_sort(t_node **head, t_node **tail)
 {

@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 18:59:59 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/20 11:03:16 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:26 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 int	get_mid(t_node *head)
 {

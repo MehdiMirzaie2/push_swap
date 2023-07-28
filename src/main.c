@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 16:23:16 by mmirzaie          #+#    #+#             */
-/*   Updated: 2023/06/20 10:44:17 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:15 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 void	handle_list(t_node **a, t_node **b, int length)
 {

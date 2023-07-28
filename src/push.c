@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:05:41 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/16 19:08:10 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:20 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 static void	push_to_a(t_node **from, t_node **to)
 {

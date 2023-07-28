@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:15:18 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/20 11:51:48 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:51 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../../include/ps.h"
 
 void	quit(void)
 {

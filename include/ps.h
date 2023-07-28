@@ -6,7 +6,7 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 10:19:03 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/20 11:49:26 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:54:23 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PS_H
 
 # include <stdlib.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 typedef uint8_t	t_bool;
 typedef struct s_node {

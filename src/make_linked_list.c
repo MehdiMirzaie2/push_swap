@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:08:36 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/20 11:17:45 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:17 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 static int	add(t_node *head, int value)
 {

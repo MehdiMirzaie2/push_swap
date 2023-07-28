@@ -6,11 +6,11 @@
 /*   By: mehdimirzaie <mehdimirzaie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 18:59:12 by mehdimirzai       #+#    #+#             */
-/*   Updated: 2023/06/20 10:24:52 by mehdimirzai      ###   ########.fr       */
+/*   Updated: 2023/07/28 12:53:24 by mehdimirzai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "../include/ps.h"
 
 void	rotate(t_node **head, t_node **tail, int a_or_b)
 {
